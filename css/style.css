@@ -27,8 +27,8 @@ body {
 p {
     font-family: var(--fonte0);
     text-align: justify;
-    text-indent: 50px;
-    line-height: 1.5em;
+    text-indent: 120px;
+    line-height: 1.2em;
 }
 
 a {
@@ -107,18 +107,18 @@ nav#menu a:hover {
 
 }
 
-/*formatação do div*/
+/*formatação do main*/
 
-div#interface {
+main {
     min-width: 400px;
-    max-width: 1000px;
+    max-width: 800px;
     background-color: #ffffff;
     margin: 0px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
 
-#interface h1 {
+article h1 {
     font-family: var(--fonte2);
     font-size: 20pt;
     color: var(--cor5);
@@ -126,13 +126,15 @@ div#interface {
     
 }
 
-#interface h2 {
+article h2 {
     font-family: var(--fonte2);
     font-size: 15pt;
     color: var(--cor5);
     margin: 5px auto auto 25px;
     background-color: var(--cor0);
 }
+
+/*formatação de imagem e video*/
 
 img.centro {
     margin: auto;
@@ -157,20 +159,22 @@ img.centro {
     height: 100%;
    }
 
+   /*formatação do aside e ul*/
+
    aside#baixo {
     display: inline-table;
+    min-width: 400px;
+    max-width: 800px;
     height: 200px;
-    text-align: justify;
     background-color: var(--cor0);
     border-radius: 10px;
-
    }
 
    aside#baixo h1 {
     font-family: var(--fonte1);
     font-size: 13pt;
     color: #ffffff;
-    margin: auto auto auto -40px;
+    margin: auto;
     padding: 10px;
     background-color: var(--cor3);
     border-radius: 10px;
@@ -179,14 +183,15 @@ img.centro {
    aside#baixo ul {
     list-style-type: '\2714\0020\0020';
     columns: 2;
-    list-style-position: inside;
+    list-style-position: initial;
    }
 
    footer#rodape {
     position: absolute;
     overflow-x: hidden;
     width: 100%;
-    margin: auto auto -1000px -175px;
+    height: 50px;
+    margin: 20px auto 0px -10px;
     background-color: var(--cor5);
     padding: 10px;
 }
@@ -194,6 +199,7 @@ img.centro {
 footer#rodape p {
     text-align: center;
     color: #ffffff;
+    margin-top: auto;
 }
 
    
