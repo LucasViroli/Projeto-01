@@ -169,7 +169,7 @@ div.video iframe {
 
 /*formatação do aside e ul*/
 
-aside {
+article > aside {
     display: inline-table;
     min-width: 320px;
     max-width: 1000px;
