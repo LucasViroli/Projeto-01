@@ -5,6 +5,10 @@
     src: url(../fonts/idroid.otf);
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
 :root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
@@ -22,66 +26,71 @@
 body {
     overflow-x: hidden;
     background-color: var(--cor1);
-}
-
-p {
     font-family: var(--fonte0);
-    text-align: justify;
-    text-indent: 50px;
-    line-height: 1.2em;
 }
 
 a {
     color: var(--cor2);
     text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5;
 }
 
 a:hover {
     text-decoration: underline;
+    background-color: var(--cor3);
 }
 
-header#cabecalho {
+a.externo::after {
+    content: '\00A0\1F517';
+}
+header {
     width: 100%;
-    height: 200px;
-    margin: -10px auto 0px -10px;
-    background-color: var(--cor5);
-    padding: 10px;
-    
-    
-}
-
-header#cabecalho hgroup {
+    min-height: 150px;
+    padding-right: 10px;
     text-align: center;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    padding-top: 40px;
 }
 
-header#cabecalho h1 {
+header > h1 {
+    color: white;
     font-family: var(--fonte1);
-    font-size: 25pt;
-    color: #ffffff;
+    font-size: 3em;
+    padding-bottom: 5px;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, .6);
-    margin-bottom: 10px;
+    
 }
 
-header#cabecalho h2 {
-    font-family: Arial, Helvetica, sans-serif;
+header > p {
+    font-family: var(--fonte0);
+    font-size: 1.2em;
     color: #ffffff;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, .6);
-    font-size: 13pt;
-    margin-top: 10px;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    padding-bottom: 57px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, .6);
+    
 }
 
 /*formatação do menu*/
 
 nav#menu {
-    display: block;
+    background-color: var(--cor4);
+}
+
+nav#menu  h1 {
+    display: none;
 }
 
 nav#menu ul {
     list-style: none;
     text-transform: uppercase;
-    position: absolute;
-    top: 165px;
-    left: -20px;
+    position: relative;
+
+   
     
 }
 
@@ -92,20 +101,17 @@ nav#menu li {
     transition: background-color 1s;
 }
 
-
-nav#menu h1 {
-    display: none;
+nav#menu > a {
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition-duration: .5s;
 }
 
-nav#menu a {
-    color: #ffffff;
-    text-decoration: none;
-
-}
-
-nav#menu a:hover {
-    text-decoration: underline;
-
+nav#menu > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
 }
 
 /*formatação do main*/
@@ -123,7 +129,8 @@ main {
 
 article h1 {
     font-family: var(--fonte2);
-    font-size: 20pt;
+    font-weight: normal;
+    font-size: 2em;
     color: var(--cor5);
     margin: 5px auto auto 50px;
     
@@ -131,7 +138,8 @@ article h1 {
 
 article h2 {
     font-family: var(--fonte2);
-    font-size: 15pt;
+    font-weight: normal;
+    font-size: 1.5em;
     color: var(--cor5);
     margin: 5px auto auto 25px;
     background-color: var(--cor0);
@@ -146,7 +154,7 @@ main img{
 img.centro {
     margin: auto;
     display: block;
-    width: 50%;
+    max-width: 350px;
 }
 
 div.video {
@@ -170,26 +178,23 @@ div.video iframe {
 /*formatação do aside e ul*/
 
 article > aside {
-    display: inline-table;
-    min-width: 320px;
-    max-width: 1000px;
-    height: 200px;
     background-color: var(--cor0);
     border-radius: 10px;
 }
 
-aside h1 {
+aside h3 {
     font-family: var(--fonte1);
     font-size: 13pt;
     color: #ffffff;
     margin: auto;
     padding: 10px;
     background-color: var(--cor3);
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 aside > p {
-    padding: 6px;
+    margin: 4px 0px;
+    padding: 0px 6px 0px 6px;
 }
 
 
@@ -200,8 +205,6 @@ aside ul {
 }
 
 footer {
-    position: absolute;
-    overflow-x: hidden;
     width: 100%;
     height: 40px;
     margin: 20px auto 0px -10px;
