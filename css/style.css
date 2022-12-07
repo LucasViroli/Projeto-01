@@ -9,6 +9,7 @@
     margin: 0px;
     padding: 0px;
 }
+
 :root {
     --cor0: #c5ebd6;
     --cor1: #83e1ad;
@@ -44,6 +45,7 @@ a:hover {
 a.externo::after {
     content: '\00A0\1F517';
 }
+
 header {
     width: 100%;
     min-height: 150px;
@@ -117,33 +119,44 @@ nav#menu > a:hover {
 /*formatação do main*/
 
 main {
-    min-width: 320px;
+    min-width: 300px;
     max-width: 1000px;
-    background-color: #ffffff;
-    margin: 0px auto 0px auto;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    padding: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
-article h1 {
+main h1 {
     font-family: var(--fonte2);
     font-weight: normal;
-    font-size: 2em;
+    font-size: 1.8em;
     color: var(--cor5);
-    margin: 5px auto auto 50px;
+    
     
 }
 
-article h2 {
+main h2 {
     font-family: var(--fonte2);
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: var(--cor5);
     margin: 5px auto auto 25px;
-    background-color: var(--cor0);
+    background-image: linear-gradient(to right, var(--cor0), transparent);
+    text-indent: 8px;
 }
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
 
 /*formatação de imagem e video*/
 
@@ -177,46 +190,46 @@ div.video iframe {
 
 /*formatação do aside e ul*/
 
-article > aside {
+aside {
     background-color: var(--cor0);
+    padding: 10px;
     border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, .3);
 }
 
-aside h3 {
-    font-family: var(--fonte1);
-    font-size: 13pt;
-    color: #ffffff;
-    margin: auto;
-    padding: 10px;
+aside > h3 {
+    color: white;
     background-color: var(--cor3);
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
     border-radius: 10px 10px 0px 0px;
 }
-
-aside > p {
-    margin: 4px 0px;
-    padding: 0px 6px 0px 6px;
-}
-
 
 aside ul {
     list-style-type: '\2714\0020\0020';
     columns: 2;
-    list-style-position: initial;
+    list-style-position: inside;
 }
 
 footer {
-    width: 100%;
-    height: 40px;
-    margin: 20px auto 0px -10px;
     background-color: var(--cor5);
-    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
 }
 
-footer > p {
-    text-align: center;
-    color: #ffffff;
-    margin-top: auto;
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
 }
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
 
    
 
